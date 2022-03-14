@@ -1,5 +1,5 @@
 
-# ⚙ Food finder
+# ⚙ Project 1
 
 ## 📂 Assignment
 
