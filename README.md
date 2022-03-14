@@ -1,5 +1,5 @@
 
-# ⚙ Digitaal burgerschap helper
+# ⚙ Healty food helper
 
 ## 📂 Assignment
 User story: 
