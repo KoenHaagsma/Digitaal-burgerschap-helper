@@ -3,8 +3,8 @@
 
 ## 📂 Assignment
 User story: 
-Digitaal burgerschap
-Als oudere burger wil ik leren hoe ik digitale formulieren van de gemeente kan vinden, invullen en versturen, om zodoende de digitalisering van de maatschappij beter het hoofd te kunnen bieden.
+Voeding en diëtiek
+Als sportieve twintiger wil ik mij verdiepen in het effect van gezonde voeding op mijn conditie, om te leren hoe ik mijn sport beter kan beoefenen.
 
 ## 🧾 Table of contents
 -   [About the project](##About-the-project)
