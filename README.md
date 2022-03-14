@@ -2,6 +2,9 @@
 # ⚙ Project 1
 
 ## 📂 Assignment
+User story: 
+Digitaal burgerschap
+Als oudere burger wil ik leren hoe ik digitale formulieren van de gemeente kan vinden, invullen en versturen, om zodoende de digitalisering van de maatschappij beter het hoofd te kunnen bieden.
 
 ## 🧾 Table of contents
 -   [About the project](##About-the-project)
