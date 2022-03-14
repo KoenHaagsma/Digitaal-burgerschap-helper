@@ -1,5 +1,5 @@
 
-# ⚙ Project 1
+# ⚙ Digitaal burgerschap helper
 
 ## 📂 Assignment
 User story: 
