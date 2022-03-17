@@ -5,7 +5,7 @@ import { renderElementAndClean, renderElement, cleanElement } from '../modules/r
 let getArticle = async () => {
     // TODO: Build so that article will be the article that is clicked on
     try {
-        let res = await fetch('../../../src/js/food.json');
+        let res = await fetch('/Healty-food-helper/src/js/food.json');
         return await res.json();
     } catch (error) {
         console.log(error);
