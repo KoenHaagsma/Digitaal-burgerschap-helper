@@ -21,17 +21,21 @@ body {
 .home > h1 {
     font-size: 2rem;
     margin: 0;
+    text-align: center;
 }
 
-.home > h1 > span {
+.home > h1 > span,
+.details > h1 > span {
     color: red;
 }
 
-.home > h1 > span:nth-of-type(2) {
+.home > h1 > span:nth-of-type(2),
+.details > h1 > span:nth-of-type(2) {
     font-size: 4rem;
 }
 
-.home > h1 > span:nth-of-type(3) {
+.home > h1 > span:nth-of-type(3),
+.details > h1 > span:nth-of-type(3) {
     writing-mode: horizontal-tb;
     display: inline-block;
     transform: rotate(-90deg);
@@ -96,7 +100,9 @@ body {
     color: white;
     font-size: 1rem;
     font-weight: bold;
+    margin-top: 0.5rem;
 }
+
 .home > .content > .topic-container > button:hover {
     background-color: rgba(0, 100, 200, 0.9);
 }
@@ -117,10 +123,11 @@ body {
     width: 25%;
     margin: 0.25rem;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0.25rem;
+    padding: 0.3rem;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 .home > .content > .topic-container > .topic > article > img {
@@ -132,8 +139,79 @@ body {
     font-size: 0.75rem;
     font-weight: 500;
     display: block;
-    width: 120px;
+    width: 100px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
+}
+
+/* Details */
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.details > .details-content > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details > .details-content > section > img {
+    width: auto;
+    height: 8rem;
+}
+
+.details > .details-content > section > h2 {
+    margin-bottom: 0;
+}
+
+.details > .details-content > section > p {
+    margin-top: 0.5rem;
+}
+
+.details > .details-content > section > p:first-of-type {
+    color: gray;
+    font-size: 0.75rem;
+}
+
+.details > .details-content > section > section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.details > .details-content > section > section > h2 {
+    font-size: 1.25rem;
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 100, 200);
+}
+
+.details > .details-content > section > section > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.details > .details-content > section > section > div > article {
+    height: 8rem;
+    width: 30%;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.back-button {
+    position: absolute;
+    font-size: 2rem;
+    text-decoration: none;
+    color: red;
+    left: 0;
 }

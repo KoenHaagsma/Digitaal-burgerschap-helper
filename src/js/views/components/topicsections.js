@@ -8,7 +8,7 @@ const topicSections = (url, fallBackURL, config, topic, classes) => {
         <h2>${topic}</h2>
         <section class="${classes} topic" id=${classes}>
             <div class="loader-container">
-                <img src="../../../images/Preloader_3.gif">
+                <img src="/Healty-food-helper/images/Preloader_3.gif">
             </div>
         </section>
     </div>
@@ -41,7 +41,7 @@ const topicSections = (url, fallBackURL, config, topic, classes) => {
             articles.forEach((article) => {
                 article.addEventListener('click', (event) => {
                     event.preventDefault();
-                    // TODO: Add logic for detailed page if i have time
+                    location.href = `/Healty-food-helper/#/details/preview`;
                 });
             });
 
@@ -52,25 +52,36 @@ const topicSections = (url, fallBackURL, config, topic, classes) => {
             if (loaderContainer) {
                 loaderContainer.remove();
             }
-
-            renderElement(containerSelector, `<button class="more-${classes}">Meer ${classes}</button>`, 'afterend');
-
-            const fullArray = data.results.slice(6, data.results.length);
-            const button = document.querySelector(`.more-${classes}`);
-            button.addEventListener('click', (event) => {
-                event.preventDefault();
-                fullArray.forEach((result) => {
-                    if (result.coverimages.length <= 0 || !result.titles) return;
-                    const html = `
+            if (data.results.length > 6) {
+                renderElement(
+                    containerSelector,
+                    `<button class="more-${classes} more-button">Meer ${classes}</button>`,
+                    'afterend',
+                );
+                const fullArray = data.results.slice(6, data.results.length);
+                const button = document.querySelector(`.more-${classes}`);
+                button.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    fullArray.forEach((result) => {
+                        if (result.coverimages.length <= 0 || !result.titles) return;
+                        const html = `
                         <article>
                             <img src="${result.coverimages[0]}">
                             <h3>${result.titles[0]}</h3>
                         </article>`;
-                    renderElement(containerSelector, html, 'beforeend');
-                });
+                        renderElement(containerSelector, html, 'beforeend');
+                    });
+                    const articles = document.querySelectorAll(`.${classes} article`);
+                    articles.forEach((article) => {
+                        article.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            location.href = `/Healty-food-helper/#/details/preview`;
+                        });
+                    });
 
-                button.remove();
-            });
+                    button.remove();
+                });
+            }
         })
         .catch((error) => {
             console.error(error);

@@ -1,9 +1,11 @@
 import Home from '../views/home.js';
 import Error404 from '../views/error404.js';
+import Details from '../views/details.js';
 import Utils from '../helpers/Utils.js';
 
 const routes = {
     '/': Home,
+    '/details/:id': Details,
 };
 
 // https://github.com/rishavs/vanillajs-spa
