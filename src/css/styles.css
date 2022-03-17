@@ -7,6 +7,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 #page_container {
@@ -20,6 +21,21 @@ body {
 .home > h1 {
     font-size: 2rem;
     margin: 0;
+}
+
+.home > h1 > span {
+    color: red;
+}
+
+.home > h1 > span:nth-of-type(2) {
+    font-size: 4rem;
+}
+
+.home > h1 > span:nth-of-type(3) {
+    writing-mode: horizontal-tb;
+    display: inline-block;
+    transform: rotate(-90deg);
+    line-height: 60%;
 }
 
 .home > .onderwerpen {
@@ -64,13 +80,13 @@ body {
     color: black;
 }
 
-.home > .content {
+.home > .content > .topic-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.home > .content > button {
+.home > .content > .topic-container > button {
     width: 80%;
     margin: auto;
     padding: 0.5rem;
@@ -81,22 +97,22 @@ body {
     font-size: 1rem;
     font-weight: bold;
 }
-.home > .content > button:hover {
+.home > .content > .topic-container > button:hover {
     background-color: rgba(0, 100, 200, 0.9);
 }
 
-.home > .content > h2 {
+.home > .content > .topic-container > h2 {
     text-decoration: underline;
     text-decoration-color: rgb(0, 100, 200);
 }
 
-.home > .content > .voedingsleer {
+.home > .content > .topic-container > .topic {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.home > .content > .voedingsleer > article {
+.home > .content > .topic-container > .topic > article {
     border-radius: 5px;
     width: 25%;
     margin: 0.25rem;
@@ -107,12 +123,17 @@ body {
     padding: 0.25rem;
 }
 
-.home > .content > .voedingsleer > article > img {
+.home > .content > .topic-container > .topic > article > img {
     width: 4rem;
     height: auto;
 }
 
-.home > .content > .voedingsleer > article > h3 {
+.home > .content > .topic-container > .topic > article > h3 {
     font-size: 0.75rem;
     font-weight: 500;
+    display: block;
+    width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

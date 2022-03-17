@@ -5,7 +5,6 @@ async function fetchData(url, fallbackUrl, config) {
     } catch (error) {
         let res = await fetch(`${fallbackUrl}`, config);
         return await res.json();
-        console.log(error);
     }
 }
 
