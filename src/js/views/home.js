@@ -38,6 +38,7 @@ const Home = {
         const urlDieet = `${cors}${endpoint}${queryDieet}&authorization=${key}&detaillevel=${detail}&output=json`;
         const fallBackURL = '/Healty-food-helper/src/js/food.json';
 
+        // ! URL not working for now
         const stagingURL =
             'https://obaliquid.staging.aquabrowser.nl/onderwijs/api/v1/search/?q=voeding+NOT+lom.lifecycle.contribute.publisher%3Dwikipedia&authorization=a57b7bbd1cde2f6fb7ce5b3f2d1d96e0';
 
